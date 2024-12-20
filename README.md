@@ -48,7 +48,7 @@ The statement and document uploads are mandatory to proceed to the next steps.
 How to Run the Project
 
 Clone the repository:
-git clone https://github.com/your-repo-link.git
+git clone https://github.com/SiddharthxsrivastavA/Rise11
 
 Install dependencies:
 npm install
