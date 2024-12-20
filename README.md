@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+File Your Claim Dashboard
 
-## Getting Started
+Overview:
+This project is a responsive "File Your Claim" dashboard designed for users to seamlessly file claims with necessary details. The dashboard adapts to various screen sizes, including desktop, tablet, and mobile views, ensuring a smooth user experience across all devices.
 
-First, run the development server:
+Features:
+Step-by-Step Claim Filing Process: Users are guided through a multi-step process to file their claims, from providing preliminary details to payment.
 
-```bash
+Input Forms:
+*Claim Value: Includes fields for contract value and claim value with dynamic validation.
+*Place & Language Selection: Allows users to specify the place and language for proceedings.
+*Statement Submission: Users can either type their statement or upload it as a PDF.
+*Document Upload: Includes options to upload contracts, arbitration agreements, and additional documents (up to 25MB).
+*Responsive Design: Optimized for desktop, tablet, and mobile devices.
+
+Approach to Building the Dashboard
+
+Design:
+Used a clean and minimalist layout to maintain user focus on essential information.
+Tailored each component for clarity and ease of use.
+
+Responsive Implementation:
+Developed using HTML, CSS (with utility-first framework like Tailwind CSS), and JavaScript.
+Used media queries to ensure optimal display on all devices.
+
+Validation:
+Added dynamic validation to ensure users enter correct claim values and other required details.
+
+User Guidance:
+Implemented clear labeling, placeholder text, and tooltips to guide users effectively.
+
+Challenges Faced and Resolutions
+1. Ensuring Responsiveness Across Devices
+Challenge: Designing for varying screen sizes without losing functionality or clarity.
+Solution: Utilized Tailwind CSS's responsive utilities and thoroughly tested on different devices.
+2. Dynamic Validation
+Challenge: Calculating claim value as a percentage of the contract value dynamically.
+Solution: Implemented real-time JavaScript validation to provide immediate feedback to users.
+3. File Upload Restrictions
+Challenge: Limiting upload size and handling errors for large files.
+Solution: Integrated file input validation with size checks and provided user-friendly error messages.
+Assumptions
+Users are expected to input claim values in USD.
+Maximum file upload size is restricted to 25MB per document.
+The language and place of proceedings default to those specified in the agreement unless stated otherwise.
+The statement and document uploads are mandatory to proceed to the next steps.
+
+How to Run the Project
+
+Clone the repository:
+git clone https://github.com/your-repo-link.git
+
+Install dependencies:
+npm install
+
+Run the development server:
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Access the dashboard at http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Technology Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Next.js for front-end development.
+Tailwind CSS for styling and responsive design.
+JavaScript for interactivity and validation.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
